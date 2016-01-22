@@ -2,8 +2,8 @@ FROM ubuntu:wily
 
 MAINTAINER Manuel Ryan <ryan@shamu.ch>
 
-ARG maven_repo=http://central.maven.org/maven2
-ARG npm_repo=https://registry.npmjs.org/
+ENV maven_repo=http://central.maven.org/maven2
+ENV npm_repo=https://registry.npmjs.org/
 
 RUN  echo "deb http://ppa.launchpad.net/webupd8team/java/ubuntu wily main" | tee /etc/apt/sources.list.d/webupd8team-java.list && \
   echo "deb-src http://ppa.launchpad.net/webupd8team/java/ubuntu wily main" | tee -a /etc/apt/sources.list.d/webupd8team-java.list && \
