@@ -48,6 +48,6 @@ rm -rf /var/cache/oracle-jdk8-installer && \
 rm -rf /usr/lib/jvm/java-8-oracle/src.zip && \
 rm -rf /usr/lib/jvm/java-8-oracle/javafx-src.zip && \
 rm -rf /usr/lib/jvm/java-8-oracle/lib/missioncontrol && \
-rm -rf /usr/lib/jvm/java-8-oracle/lib/visualvm \
+rm -rf /usr/lib/jvm/java-8-oracle/lib/visualvm
 
 CMD /run.sh
