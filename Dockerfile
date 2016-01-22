@@ -40,7 +40,7 @@ RUN chmod +x /run.sh
 ENV JAVADOC_ARGS -skipUiFiles
 
 # Remove useless stuff to reduce image size
-RUN apt-get remove -y --purge build-essential gcc-5 perl perl-modules libicu55 &&
+RUN apt-get remove -y --purge build-essential gcc-5 perl perl-modules libicu55 && \
  echo 'Yes, do as I say!' | apt-get remove -y --force-yes --purge systemd && \
  apt-get autoremove -y && \
 rm -rf /var/lib/apt/lists/* && \
@@ -48,6 +48,6 @@ rm -rf /var/cache/oracle-jdk8-installer && \
 rm -rf /usr/lib/jvm/java-8-oracle/src.zip && \
 rm -rf /usr/lib/jvm/java-8-oracle/javafx-src.zip && \
 rm -rf /usr/lib/jvm/java-8-oracle/lib/missioncontrol && \
-rm -rf /usr/lib/jvm/java-8-oracle/lib/visualvm && \
+rm -rf /usr/lib/jvm/java-8-oracle/lib/visualvm \
 
 CMD /run.sh
