@@ -2,8 +2,9 @@ FROM ubuntu:wily
 
 MAINTAINER Manuel Ryan <ryan@shamu.ch>
 
-ARG maven_repo=http://central.maven.org/maven2
-ARG npm_repo=https://registry.npmjs.org/
+# Switch back to ARG once docker hub will be running docker >= 1.9
+ENV maven_repo=http://central.maven.org/maven2
+ENV npm_repo=https://registry.npmjs.org/
 
 ADD install.sh /install.sh
 RUN chmod +x /install.sh
