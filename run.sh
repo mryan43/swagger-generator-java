@@ -19,4 +19,6 @@ convert --no-validation \
 $(find /output/swagger-1.2 -name "*.json" ! -name 'service.json' -printf "%p ") \
 > /output/swagger-2.0/swagger.json
 
+chmod -R o+w /output
+
 echo "Done."
